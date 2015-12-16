@@ -26,11 +26,26 @@ angular.module('app.controllers', [])
     $scope.messageOptions = [];
 
     $scope.sendMessage = function () {
+
       if ($scope.input.userinput) {
         $scope.messages.push(angular.extend({}, {
           content: '<p>' + $scope.input.userinput + '</p>',
           source: 'u'
         }));
+
+        $http({
+          method: 'POST',
+          url: 'http://120.25.102.53/RockPlant/app/talk.do',
+          data: {question:$scope.input.userinput}
+        }).success(function (response, header, config, status) {
+          console.log("======================================================== API =======================================================")
+          if (response.content) {
+            $scope.messages.push(angular.extend({}, {content: '<p>' + response.content + '</p>', source: 'e'}));
+            $ionicScrollDelegate.scrollBottom(true);
+          }
+        }).error(function (response, status) {
+          console.log("======================================================== ERROR =====================================================")
+        })
 
         $scope.input.userinput = null;
         $ionicScrollDelegate.scrollBottom(true);

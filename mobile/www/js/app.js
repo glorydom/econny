@@ -22,6 +22,31 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
 })
 
 .config(function($httpProvider){
+  $httpProvider.defaults.transformRequest = function (data) {
+    if (data === undefined) {
+      return data;
+    }
+    if (typeof (data) === typeof ("")) {
+      return data;
+    }
+    return param(data);
+  }
 
-  //$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+  $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
 })
+
+function param(param) {
+  var str = "",
+    i;
+  for (i in param) {
+    if (param.hasOwnProperty(i)) {
+      if (str[0] != undefined) {
+        str += "&";
+      }
+      str += encodeURIComponent(i);
+      str += "=";
+      str += encodeURIComponent(param[i]);
+    }
+  }
+  return str;
+};
