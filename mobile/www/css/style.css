@@ -136,10 +136,11 @@ ion-content.e-background {
 
 .item.item-input.e-input {
   border: 0;
-  width: 100%;
-  margin-left: 9px;
-  margin-right: 9px;
-  padding-left: 10px;
+  width: 89%;
+  /*margin-left: 9px;*/
+  /*margin-right: 9px;*/
+  padding: 3px 9px;
+  margin:0 10px;
   border-bottom: 1px solid #7bc860;
 }
 
@@ -149,10 +150,11 @@ ion-content.e-background {
 
 .item.item-input.e-input textarea::-webkit-input-placeholder{
   color: #ceebc4;
-  line-height: 25px;
+  /*line-height: 25px;*/
 }
 
 .button.button-small.button-balanced.e-send{
+  width:10%;
   min-width:57px;
 }
 

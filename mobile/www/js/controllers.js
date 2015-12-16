@@ -26,16 +26,18 @@ angular.module('app.controllers', [])
     $scope.messageOptions = [];
 
     $scope.sendMessage = function () {
-      $scope.messages.push(angular.extend({}, {
-        content: '<p>' + $scope.input.userinput + '</p>',
-        source: 'u'
-      }));
+      if ($scope.input.userinput) {
+        $scope.messages.push(angular.extend({}, {
+          content: '<p>' + $scope.input.userinput + '</p>',
+          source: 'u'
+        }));
 
-      $scope.input.userinput = null;
-      $ionicScrollDelegate.scrollBottom(true);
+        $scope.input.userinput = null;
+        $ionicScrollDelegate.scrollBottom(true);
+      }
     }
 
-    $scope.requestData = function(){
+    $scope.requestData = function () {
       $http({
         method: 'GET',
         //url: 'http://120.25.102.53/RockPlant/app/queryStatus.do'
@@ -47,14 +49,23 @@ angular.module('app.controllers', [])
           "soil_hum_status": response[response.length - 1].soil_hum_status,
           "temp_status": response[response.length - 1].temp_status
         };
-        angular.forEach(response,function(res){
-          $scope.messageOptions.push(angular.extend({},{content: '<p>' + res.content + '</p>', source: 'e'}))
-        })
-        $scope.messages = $scope.messageOptions.slice(0, $scope.messageOptions.length);
-        setTimeout(function () {
-          $ionicScrollDelegate.scrollBottom(true);
-        }, 500);
 
+        if (!$scope.messages) {
+          angular.forEach(response, function (res) {
+            $scope.messageOptions.push(angular.extend({}, {content: '<p>' + res.content + '</p>', source: 'e'}))
+          })
+          $scope.messages = $scope.messageOptions.slice(0, $scope.messageOptions.length);
+          setTimeout(function () {
+            $ionicScrollDelegate.scrollBottom(true);
+          }, 500);
+        }
+        else {
+          angular.forEach(response, function (res) {
+            $scope.messages.push(angular.extend({}, {content: '<p>' + res.content + '</p>', source: 'e'}));
+          })
+
+          $ionicScrollDelegate.scrollBottom(true);
+        }
         console.log("======================================================== API =======================================================")
       }).error(function (response, status) {
         //console.log(response,status);
