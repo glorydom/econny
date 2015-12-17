@@ -145,7 +145,7 @@ ion-content.e-background {
   height:auto;
   width:100%;
   background-color: #ffffff;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #ceebc4;
   margin-top: 43px;
 }
 
@@ -174,7 +174,7 @@ ion-content.e-content {
 }
 
 .bar-frosted.e-footbar {
-  border-top: 1px solid #9e9e9e;
+  border-top: 1px solid #ceebc4;
   color: #7bc860;
   font-size: 30px;
 }
