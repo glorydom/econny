@@ -36,7 +36,7 @@ angular.module('app.controllers', [])
         $http({
           method: 'POST',
           url: 'http://120.25.102.53/RockPlant/app/talk.do',
-          data: {question:$scope.input.userinput}
+          data: {question: $scope.input.userinput}
         }).success(function (response, header, config, status) {
           console.log("======================================================== API =======================================================")
           if (response.content) {
@@ -55,8 +55,8 @@ angular.module('app.controllers', [])
     $scope.requestData = function () {
       $http({
         method: 'GET',
-        //url: 'http://120.25.102.53/RockPlant/app/queryStatus.do'
-        url: '../mock/data.json'
+        url: 'http://120.25.102.53/RockPlant/app/queryStatus.do'
+        //url: '../mock/data.json'
       }).success(function (response, header, config, status) {
         $scope.status = {
           "air_hum_status": response[response.length - 1].air_hum_status,
@@ -67,7 +67,10 @@ angular.module('app.controllers', [])
 
         if (!$scope.messages) {
           angular.forEach(response, function (res) {
-            $scope.messageOptions.push(angular.extend({}, {content: '<p>' + res.content + '</p>', source: 'e'}))
+            if (res.content.indexOf('OK!') === -1) {
+              $scope.messageOptions.push(angular.extend({}, {content: '<p>' + res.content + '</p>', source: 'e'}))
+            }
+
           })
           $scope.messages = $scope.messageOptions.slice(0, $scope.messageOptions.length);
           setTimeout(function () {
@@ -76,7 +79,9 @@ angular.module('app.controllers', [])
         }
         else {
           angular.forEach(response, function (res) {
-            $scope.messages.push(angular.extend({}, {content: '<p>' + res.content + '</p>', source: 'e'}));
+            if (res.content.indexOf('OK!') === -1) {
+              $scope.messages.push(angular.extend({}, {content: '<p>' + res.content + '</p>', source: 'e'}));
+            }
           })
 
           $ionicScrollDelegate.scrollBottom(true);
