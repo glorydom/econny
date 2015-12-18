@@ -17,6 +17,10 @@
   color: #7bc860;
 }
 
+.e-clear{
+  clear:both;
+}
+
 .e-low{
   color: #9e9e9e !important;
 }
@@ -145,17 +149,19 @@ ion-content.e-background {
   font-size: 10px;
 }
 
-.bar.bar-header.e-statusbar {
+.e-statusbar {
   height:auto;
   width:100%;
   background-color: #ffffff;
   border-bottom: 1px solid #ceebc4;
-  margin-top: 43px;
+  margin-top: 44px;
+  padding-bottom: 7px;
 }
 
 .e-status {
   width: 20%;
   text-align: center;
+  float: left;
 }
 
 .e-status-item {
@@ -262,24 +268,3 @@ ion-content.e-content {
 }
 
 /*message style end*/
-
-.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) {
-  height: auto; }
-.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
-  margin-top: -1px; }
-.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) > * {
-  margin-top: 0; }
-
-.platform-ios7.platform-cordova .popover .bar-header:not(.bar-subheader) {
-  height: auto; }
-.platform-ios7.platform-cordova .popover .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
-  margin-top: -1px; }
-.platform-ios7.platform-cordova .popover .bar-header:not(.bar-subheader) > * {
-  margin-top: 0; }
-
-.platform-ios8.platform-cordova .popover .bar-header:not(.bar-subheader) {
-  height: auto; }
-.platform-ios8.platform-cordova .popover .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
-  margin-top: -1px; }
-.platform-ios8.platform-cordova .popover .bar-header:not(.bar-subheader) > * {
-  margin-top: 0; }

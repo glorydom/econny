@@ -3,7 +3,7 @@
     <button class="button icon ion-refresh" ng-click="requestData()">
     </button>
   </ion-nav-buttons>
-  <div class="bar bar-header e-statusbar">
+  <div class="e-statusbar">
     <div class="e-status">
       <div class="e-status-item">
         Air Hum
@@ -64,6 +64,7 @@
         <i class="iconfont fertilize" ng-class="{'e-low':status.soil_hum_status === 'low','e-high':status.soil_hum_status === 'high'}">&#xe607;</i>
       </div>
     </div>
+    <div class="e-clear"></div>
   </div>
   <ion-content padding="true" class="e-content e-background">
     <ol class="messages">
