@@ -145,17 +145,18 @@ ion-content.e-background {
   font-size: 10px;
 }
 
-.bar.bar-header.e-statusbar {
+.bar.bar-subheader.e-statusbar {
   height:auto;
   width:100%;
   background-color: #ffffff;
   border-bottom: 1px solid #ceebc4;
-  margin-top: 43px;
 }
+
 
 .e-status {
   width: 20%;
   text-align: center;
+  float: left;
 }
 
 .e-status-item {
