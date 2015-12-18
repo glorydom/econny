@@ -258,3 +258,10 @@ ion-content.e-content {
 }
 
 /*message style end*/
+
+.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) {
+  height: auto; }
+.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
+  margin-top: -1px; }
+.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) > * {
+  margin-top: 0; }
