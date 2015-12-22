@@ -1,0 +1,45 @@
+/* 打印样式 */
+@media print {
+
+}
+
+/* 手机等小屏幕手持设备 */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	.aboutus_item_height{
+		min-height:180px;
+	}
+	.aboutusus{
+		width:80%;
+		max-height:150px;
+	}
+}
+
+/* 平板之类的宽度 1024 以下设备 */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+	.aboutus_item_height{
+		min-height:200px;
+	}
+	.aboutusus{
+		width:80%;
+		max-height:300px;
+	}
+}
+
+/* PC客户端或大屏幕设备: 1028px 至更大 */
+@media only screen and (min-width: 1029px) {
+	.aboutus_item_height{
+		min-height:300px;
+	}
+	.aboutusus{
+		width:50%;
+	}
+}
+
+/* 竖屏 */
+@media screen and (orientation:portrait) and (max-width: 720px) {
+
+}
+
+/* 横屏 */
+@media screen and (orientation:landscape){
+}

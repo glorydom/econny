@@ -1,0 +1,558 @@
+*{padding:0; margin:0;}
+
+/* Empty. Add your own CSS if you like */
+::-webkit-scrollbar{display:none;}
+::-webkit-scrollbar-track{}
+::-webkit-scrollbar-thumb{}
+::-webkit-scrollbar-thumb:hover {}
+::-webkit-scrollbar-thumb:active {}
+
+a:link {
+ color: #4f901a;
+ TEXT-DECORATION: none
+}
+a:visited {
+ COLOR: #4f901a; 
+ TEXT-DECORATION: none
+}
+a:hover {
+ COLOR: #4f901a;
+ text-decoration: none;
+ text-shadow: 0px 0px 0px grey;
+}
+a:active {
+ COLOR: #4f901a;
+ text-decoration: none;
+}
+
+@keyframes moveinfromright
+{
+from {left:0%;}
+to {left:100%;}
+}
+
+@-webkit-keyframes moveinfromright /*Safari and Chrome*/
+{
+from {left:0%;}
+to {left:100%;}
+}
+
+.rotate-image:hover{
+	transform:rotateY(360deg);
+	transition:transform 1s;
+}
+
+
+/* Empty. Add your own CSS if you like */
+@font-face
+{
+font-family: myTinoFont;
+src: url('myfonts/tinos/Tinos-Regular.ttf'); 
+}
+@font-face
+{
+font-family: myRobotoFont;
+src: url('myfonts/roboto/Roboto-Regular.ttf'); 
+}
+@font-face
+{
+font-family: myYellowtailFont;
+src: url('myfonts/yellowtail/Yellowtail-Regular.ttf'); 
+}
+@font-face
+{
+font-family: myKrankyFont;
+src: url('myfonts/kranky/Kranky.ttf'); 
+}
+
+body{
+font-family: myTinoFont,Microsoft yahei,STXihei;
+color: #000000;
+}
+
+/* 打印样式 */
+@media print {
+
+}
+
+/* 手机等小屏幕手持设备 */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	.header{
+		width:100%;
+		height:40px;
+		position:fixed;
+		z-index:10;
+		left:0px;
+		top:0px;
+		font-size:0.8em;
+		background: rgba(255, 255, 255, 1);
+		border:1px solid rgba(3, 3, 3, 0.1);
+	}
+	
+	.header_left{
+		width:40%;
+		float:left;
+	}
+	
+	.header_right{
+		width:60%;
+		float:left;
+	}
+	
+	.header_tab_left{
+		height:40px;
+		line-height:40px;
+		padding-left:0.6em;
+		font-size:1.2em;
+		color: #4f901a;
+		font-family: myKrankyFont;
+	}
+	
+	.header_tab{
+		height:40px;
+		line-height:40px;
+		padding-right:1em;
+		font-size:0.8em;
+	}
+	
+	.separator{
+		box-shadow: 0px 1px 3px rgba(3, 3, 3, 0.1);
+		height:1px;
+		background: rgba(3, 3, 3, 0.1);
+		clear:both;
+	}
+	
+	.info_output_title{
+		margin-left:100px;
+		margin-right:30px;
+		line-height: 0.1rem;
+		font-size:0.5em;
+		text-align:center;
+		color: #000000;
+	}
+	
+	.info_output_header{
+		margin-left:2em;
+		margin-right:2em;
+		line-height: 1rem;
+		font-size:0.8em;
+		color: #4f901a;
+	}
+	
+	.info_output{
+		margin-left:2em;
+		margin-right:2em;
+		line-height: 1rem;
+		font-size:0.7em;
+		text-indent: 2em;
+	}
+	
+	.content{
+		width:100%;height:auto;clear:both;margin-top:40px;
+	}
+	
+	.content_section_one{
+		margin-top:2em;
+		margin-bottom:2em;
+		width:100%;
+		height:95px;
+		padding-top:2em;
+		background-image: url("../pictures/mobile/greenbacktwobody.jpg");
+	}
+	
+	.content_section_two{
+		margin-top:2em;
+		margin-bottom:2em;
+		width:100%;
+	}
+	
+	.content_section_three{
+		margin-top:2em;
+		margin-bottom:2em;
+		width:100%;
+	}
+	
+	.content_section_four{
+		margin-top:2em;
+		width:100%;
+		clear:both;
+	}
+	
+	.content_potentional{
+	}
+	
+	.plants_potentional{
+	}
+	
+	.footer{
+		background: #4f901a;
+		height:40px;
+		text-align:center;
+		clear:both;
+		line-height:40px;
+		font-size:0.6em;
+		color: #ffffff;
+	}
+	
+	.footer > a{
+		color: #ffffff;
+	}
+	
+	.pictureframe{
+		width:45%;
+		height:33%;
+		max-height:200px;
+	}
+	.aboutus_content_section_one{
+		min-height:500px;
+		margin-top:2em;
+		margin-bottom:2em;
+		width:100%;
+	}
+	
+	.small_space{
+		height:1em;
+	}
+	
+	.middle_space{
+		height:1.5em;
+	}
+	
+	.large_space{
+		height:1em;
+	}
+	
+	.fake_small_space{
+		height:1em;
+	}
+}
+
+/* 平板之类的宽度 1024 以下设备 */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+	
+	.header{
+		width:100%;
+		height:55px;
+		position:fixed;
+		z-index:10;
+		left:0px;
+		top:0px;
+		background: rgba(255, 255, 255, 1);
+		border:1px solid rgba(3, 3, 3, 0.1);
+	}
+	
+	.header_left{
+		width:60%;
+		float:left;
+	}
+	
+	.header_right{
+		width:40%;
+		float:left;
+	}
+	
+	.header_tab_left{
+		height:55px;
+		line-height:55px;
+		padding-left:0.8em;
+		font-size:1.6em;
+		color: #4f901a;
+		font-family: myKrankyFont;
+	}
+	
+	.header_tab{
+		height:55px;
+		line-height:55px;
+		padding-right:20px;
+	}
+	
+	.separator{
+		box-shadow: 0px 1px 3px rgba(3, 3, 3, 0.1);
+		height:1px;
+		background: rgba(3, 3, 3, 0.1);
+		clear:both;
+	}
+	
+	.info_output_title{
+		margin-left:300px;
+		margin-right:50px;
+		line-height: 1rem;
+		font-size:1em;
+		text-align:center;
+		color: #000000;
+	}
+	
+	.info_output_header{
+		margin-left:2em;
+		margin-right:2em;
+		line-height: 1.75rem;
+		font-size:1em;
+		color:#4f901a;
+	}
+	
+	.info_output{
+		margin-left:2em;
+		margin-right:2em;
+		line-height: 1.2rem;
+		font-size:0.8em;
+		text-indent: 2em;
+	}
+	
+	.content{
+		width:100%;height:auto;clear:both;margin-top:55px;
+	}
+	
+	.content_section_one{
+		margin-top:50px;
+		margin-bottom:50px;
+		width:100%;
+		height:112px;
+		padding-top:4em;
+		padding-bottom:4em;
+		background-image: url("../pictures/tablet/greenbacktwobody.jpg");
+	}
+	
+	.content_section_two{
+		margin-top:50px;
+		margin-bottom:50px;
+		width:100%;
+	}
+	
+	.content_section_three{
+		margin-top:50px;
+		margin-bottom:50px;
+		width:100%;
+	}
+	
+	.content_section_four{
+		margin-top:50px;
+		margin-bottom:50px;
+		width:100%;
+		clear:both;
+	}
+	
+	.content_potentional{
+		width:50%;
+		float:left;
+	}
+	
+	.plants_potentional{
+		width:33%;
+		float:left;
+	}
+	
+	.footer{
+		background: #4f901a;
+		height:55px;
+		text-align:center;
+		clear:both;
+		line-height:55px;
+		font-size:1.5em;
+		color: #ffffff;
+	}
+	
+	.footer > a{
+		color: #ffffff;
+	}
+	
+	.pictureframe{
+		width:45%;
+		height:20%;
+	}
+	.aboutus_content_section_one{
+		min-height:700px;
+		margin-top:50px;
+		margin-bottom:50px;
+		width:100%;
+	}
+	
+	.small_space{
+		height:1em;
+	}
+	
+	.middle_space{
+		height:1.5em;
+	}
+	
+	.large_space{
+		height:3em;
+	}
+	
+	.fake_small_space{
+		display:none;
+	}
+	
+}
+
+/* PC客户端或大屏幕设备: 1028px 至更大 */
+@media only screen and (min-width: 1029px) {
+	
+	.header{
+		width:100%;
+		height:65px;
+		position:fixed;
+		z-index:10;
+		left:0px;
+		top:0px;
+		background: rgba(255, 255, 255, 1);
+		border:1px solid rgba(3, 3, 3, 0.1);
+	}
+	
+	.header_left{
+		width:70%;
+		float:left;
+	}
+	
+	.header_right{
+		width:30%;
+		float:left;
+	}
+	
+	.header_tab_left{
+		height:65px;
+		line-height:65px;
+		padding-left:40px;
+		font-size:2em;
+		color: #4f901a;
+		font-family: myKrankyFont;
+	}
+	
+	.header_tab{
+		height:65px;
+		line-height:65px;
+		padding-right:15px;
+	}
+	
+	.header_tab:hover{
+		height:55px;
+		line-height:55px;
+		border-bottom: 5px solid rgba(3, 3, 3, 0.1);
+		border-top: 5px solid #ffffff;
+	}
+	
+	.separator{
+		box-shadow: 0px 1px 3px rgba(3, 3, 3, 0.1);
+		height:1px;
+		background: rgba(3, 3, 3, 0.1);
+		clear:both;
+	}
+	
+	.info_output_title{
+		margin-left:460px;
+		margin-right:50px;
+		line-height: 1.75rem;
+		font-size:2em;
+		text-align:center;
+		color: #000000;
+	}
+	
+	.info_output_header{
+		margin-left:50px;
+		margin-right:50px;
+		line-height: 1.75rem;
+		font-size:1.4em;
+		color:#4f901a;
+	}
+	
+	.info_output{
+		margin-left:50px;
+		margin-right:50px;
+		line-height: 1.75rem;
+		text-indent: 2em;
+	}
+	
+	.content{
+		width:100%;height:auto;clear:both;margin-top:65px;
+	}
+	
+	.content_section_one{
+		margin-top:50px;
+		margin-bottom:50px;
+		padding-top:8em;
+		padding-bottom:8em;
+		width:100%;
+		height:175px;
+		background-image: url("../pictures/laptop/greenbacktwobody.jpg");
+		background-position: 0px  0px; 
+	}
+	
+	.content_section_two{
+		margin-top:50px;
+		margin-bottom:50px;
+		width:100%;
+	}
+	
+	.content_section_three{
+		margin-top:50px;
+		margin-bottom:50px;
+		width:100%;
+	}
+	
+	.content_section_four{
+		margin-top:50px;
+		margin-bottom:50px;
+		width:100%;
+		clear:both;
+	}
+	
+	.content_potentional{
+		width:50%;
+		float:left;
+	}
+	
+	.plants_potentional{
+		width:33%;
+		float:left;
+	}
+	
+	.footer{
+		background: #4f901a;
+		height:65px;
+		text-align:center;
+		clear:both;
+		line-height:65px;
+		font-size:1.1em;
+		color: #ffffff;
+	}
+	
+	.footer > a{
+		color: #ffffff;
+	}
+	
+	.pictureframe{
+		width:210px;
+		height:300px;
+	}
+	
+	.aboutus_content_section_one{
+		min-height:700px;
+		margin-top:50px;
+		margin-bottom:50px;
+		width:100%;
+	}
+	
+	.small_space{
+		height:30px;
+	}
+	
+	.middle_space{
+		height:50px;
+	}
+	
+	.large_space{
+		height:70px;
+	}
+	
+	.fake_small_space{
+		display:none;
+	}
+}
+
+/* 竖屏 */
+@media screen and (orientation:portrait) and (max-width: 720px) {
+
+}
+
+/* 横屏 */
+@media screen and (orientation:landscape){
+}
