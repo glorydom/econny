@@ -1,0 +1,269 @@
+/* 打印样式 */
+@media print {
+
+}
+
+#plantonetemperature:active{
+	color:grey;
+	background:#81a231;
+	border-radius:1em;
+}
+
+/* 手机等小屏幕手持设备 */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	.small_font{
+		width:100%;
+		line-height: 1rem;
+		font-size:0.1em;
+		text-align:center;
+	}
+	
+	.slide_pic_size{
+		width:100px;
+	}
+	
+	.chart_one_size{
+		width:90%;
+		height:160px;
+	}
+	
+	.plant_img_size{
+		width:60px;
+		height:60px;
+	}
+	
+	.slide_arrow_prev{
+		position:absolute;
+		top:100px;
+		left:1px;
+		z-index:1;
+		width:15px;
+		height:15px;
+		background:url(../pictures/mobile/toleft.png);
+	}
+	
+	.slide_arrow_next{
+		position:absolute;
+		top:100px;
+		right:1px;
+		z-index:1;
+		width:15px;
+		height:15px;
+		background:url(../pictures/mobile/toright.png);
+	}
+	
+	.chat_box{
+		margin-left:2em;
+		margin-right:2em;
+		line-height: 1rem;
+		font-size:0.7em;
+	}
+	
+	.plant_message{
+		display:inline-block;
+		min-height:10px;
+		border:1px solid rgba(3,3,3,0.1);
+		border-radius:10px;
+		padding:1em;
+		margin-left:65px;
+		margin-top:-30px;
+		max-width:70%;
+		word-wrap:break-word;
+		overflow:hidden;
+	}
+	
+	.person_message{
+		display:inline-block;
+		min-height:10px;
+		border:1px solid rgba(3,3,3,0.1);
+		border-radius:10px;
+		padding:1em;
+		margin-right:65px;
+		margin-top:-30px;
+		max-width:70%;
+		word-wrap:break-word;
+		overflow:hidden;
+	}
+	
+	.plant_dialog{
+		height:40px;
+		clear:both;
+		font-size:0.6em;
+		border-top:1px solid rgba(3,3,3,0.1);
+	}
+}
+
+/* 平板之类的宽度 1024 以下设备 */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+	.small_font{
+		width:100%;
+		line-height: 1rem;
+		font-size:0.5em;
+		text-align:center;
+	}
+	
+	.slide_pic_size{
+		width:200px;
+	}
+	
+	.chart_one_size{
+		width:500px;
+		height:250px;
+	}
+	
+	.plant_img_size{
+		width:70px;
+		height:70px;
+	}
+	
+	.slide_arrow_prev{
+		position:absolute;
+		top:170px;
+		left:1px;
+		z-index:1;
+		width:30px;
+		height:30px;
+		background:url(../pictures/tablet/toleft.png);
+	}
+	
+	.slide_arrow_next{
+		position:absolute;
+		top:170px;
+		right:1px;
+		z-index:1;
+		width:30px;
+		height:30px;
+		background:url(../pictures/tablet/toright.png);
+	}
+	
+	.chat_box{
+		margin-left:2em;
+		margin-right:2em;
+		line-height: 1.2rem;
+		font-size:0.8em;
+	}
+	
+	.plant_message{
+		display:inline-block;
+		min-height:10px;
+		border:1px solid rgba(3,3,3,0.1);
+		border-radius:10px;
+		padding:1em;
+		margin-left:75px;
+		margin-top:-35px;
+		max-width:70%;
+		word-wrap:break-word;
+		overflow:hidden;
+	}
+	
+	.person_message{
+		display:inline-block;
+		min-height:10px;
+		border:1px solid rgba(3,3,3,0.1);
+		border-radius:10px;
+		padding:1em;
+		margin-right:75px;
+		margin-top:-35px;
+		max-width:70%;
+		word-wrap:break-word;
+		overflow:hidden;
+	}
+	
+	.plant_dialog{
+		height:55px;
+		clear:both;
+		font-size:1.5em;
+		border-top:1px solid rgba(3,3,3,0.1);
+	}
+}
+
+/* PC客户端或大屏幕设备: 1028px 至更大 */
+@media only screen and (min-width: 1029px) {
+	.small_font{
+		width:100%;
+		line-height: 1rem;
+		font-size:1em;
+		text-align:center;
+	}
+	
+	.slide_pic_size{
+		width:300px;
+	}
+	
+	.chart_one_size{
+		width:800px;
+		height:400px;
+	}
+	
+	.plant_img_size{
+		width:80px;
+		height:80px;
+	}
+	
+	.slide_arrow_prev{
+		position:absolute;
+		top:230px;
+		left:1px;
+		z-index:1;
+		width:50px;
+		height:50px;
+		background:url(../pictures/laptop/toleft.png);
+	}
+	
+	.slide_arrow_next{
+		position:absolute;
+		top:230px;
+		right:1px;
+		z-index:1;
+		width:50px;
+		height:50px;
+		background:url(../pictures/laptop/toright.png);
+	}
+	
+	.chat_box{
+	    margin-left: 50px;
+		margin-right: 50px;
+		line-height: 1.75rem;
+	}
+	
+	.plant_message{
+		display:inline-block;
+		min-height:10px;
+		border:1px solid rgba(3,3,3,0.1);
+		border-radius:10px;
+		padding:1em;
+		margin-left:90px;
+		margin-top:-40px;
+		max-width:70%;
+		word-wrap:break-word;
+		overflow:hidden;
+	}
+	
+	.person_message{
+		display:inline-block;
+		min-height:10px;
+		border:1px solid rgba(3,3,3,0.1);
+		border-radius:10px;
+		padding:1em;
+		margin-right:90px;
+		margin-top:-40px;
+		max-width:70%;
+		word-wrap:break-word;
+		overflow:hidden;
+	}
+	
+	.plant_dialog{
+		height:65px;
+		font-size:1em;
+		border-top:1px solid rgba(3,3,3,0.1);
+	}
+}
+
+/* 竖屏 */
+@media screen and (orientation:portrait) and (max-width: 720px) {
+
+}
+
+/* 横屏 */
+@media screen and (orientation:landscape){
+}

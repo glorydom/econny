@@ -1,0 +1,182 @@
+/* ???? */
+@media print {
+
+}
+
+/*li{
+	list-style:none
+}*/
+
+/* ?????????? */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	
+	.video_size{
+		width:100%;
+	}
+	
+	.slide_arrow_prev{
+		position:absolute;
+		top:120px;
+		left:1px;
+		z-index:1;
+		width:15px;
+		height:15px;
+		background:url(../pictures/mobile/toleft.png);
+	}
+	
+	.slide_arrow_next{
+		position:absolute;
+		top:120px;
+		right:1px;
+		z-index:1;
+		width:15px;
+		height:15px;
+		background:url(../pictures/mobile/toright.png);
+	}
+	
+	.process_header{
+		display:inline-block;
+		text-align:center;
+		width:30px;
+		height:30px;
+		line-height:30px;
+		background:#137985;
+		color:#ffffff;
+		border-radius:90%;
+		font-size:0.5em;
+		margin-left:1em;
+	}
+	
+	.process_item{
+		display:inline-block;
+		text-align:center;
+		margin-top:1px;
+		width:30px;
+		height:30px;
+		line-height:30px;
+		color:#ffffff;
+		border-radius:90%;
+		font-size:0.5em;
+	}
+	
+	.share_wechat{
+		display:none;
+	}
+}
+
+/* ??????? 1024 ???? */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+
+	.video_size{
+		width:60%;
+	}
+	
+	.slide_arrow_prev{
+		position:absolute;
+		top:150px;
+		left:1px;
+		z-index:1;
+		width:30px;
+		height:30px;
+		background:url(../pictures/tablet/toleft.png);
+	}
+	
+	.slide_arrow_next{
+		position:absolute;
+		top:150px;
+		right:1px;
+		z-index:1;
+		width:30px;
+		height:30px;
+		background:url(../pictures/tablet/toright.png);
+	}
+	
+	.process_header{
+		display:inline-block;
+		text-align:center;
+		width:40px;
+		height:40px;
+		line-height:40px;
+		background:#137985;
+		color:#ffffff;
+		border-radius:90%;
+		margin-left:1em;
+	}
+	
+	.process_item{
+		display:inline-block;
+		text-align:center;
+		margin-top:1px;
+		width:40px;
+		height:40px;
+		line-height:40px;
+		color:#ffffff;
+		border-radius:90%;
+	}
+	
+	.share_wechat{
+	}
+}
+
+/* PC?????????: 1028px ??? */
+@media only screen and (min-width: 1029px) {
+	
+	.video_size{
+		width:50%;
+	}
+	
+	.slide_arrow_prev{
+		position:absolute;
+		top:200px;
+		left:1px;
+		z-index:1;
+		width:50px;
+		height:50px;
+		background:url(../pictures/laptop/toleft.png);
+	}
+	
+	.slide_arrow_next{
+		position:absolute;
+		top:200px;
+		right:1px;
+		z-index:1;
+		width:50px;
+		height:50px;
+		background:url(../pictures/laptop/toright.png);
+	}
+	
+	.process_header{
+		display:inline-block;
+		text-align:center;
+		width:50px;
+		height:50px;
+		line-height:50px;
+		background:#137985;
+		color:#ffffff;
+		border-radius:90%;
+		margin-left:1em;
+	}
+	
+	.process_item{
+		display:inline-block;
+		text-align:center;
+		margin-top:1px;
+		width:50px;
+		height:50px;
+		line-height:50px;
+		color:#ffffff;
+		border-radius:90%;
+	}
+	
+	.share_wechat{
+	}
+}
+
+/* ?? */
+@media screen and (orientation:portrait) and (max-width: 720px) {
+
+}
+
+/* ?? */
+@media screen and (orientation:landscape){
+}
